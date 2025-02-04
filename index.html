@@ -1,39 +1,98 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Ideation Studio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
-		<div id="wrapper">
-			<div id="bg"></div>
-			<div id="overlay"></div>
-			<div id="main">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ideation Studio</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Droid+Serif:wght@700&display=swap");
 
-				<!-- Header -->
-					<header id="header">
-						<h1>Ideation Studio</h1>
-						<p>3D Printing &nbsp;&bull;&nbsp; CNC &nbsp;&bull;&nbsp; Education</p>
-						<nav>
-							<ul>
-								<li><a href="mailto:info@ideation-studio.nl" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-							</ul>
-						</nav>
-					</header>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-				<!-- Footer -->
-					<footer id="footer">
-					</footer>
+    body {
+      font-family: 'Droid Serif';
+      background-color: #FFFFFF;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      color: #000000;
+    }
 
-			</div>
-		</div>
-		<script>
-			window.onload = function() { document.body.classList.remove('is-preload'); }
-			window.ontouchmove = function() { return false; }
-			window.onorientationchange = function() { document.body.scrollTop = 0; }
-		</script>
-	</body>
+    .container {
+      text-align: center;
+      margin-bottom: 170px;
+    }
+
+    img {
+      max-width: 100%;
+      width: 600px;
+      height: auto;
+      margin-bottom: 0px;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .email-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 20px;
+      text-decoration: none;
+      color: #2868ae;
+      font-size: 1.2rem;
+    }
+
+    .email-link:hover {
+      color: #125189;
+    }
+
+    .email-icon {
+      margin-right: 8px;
+    }
+
+    footer {
+      background-color: #f8f9fa;
+      width: 100%;
+      padding: 40px 0;
+      text-align: center;
+      position: fixed;
+      bottom: 0;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: #2868ae;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="images/logo.png" alt="Ideation Studio Logo">
+    <h1>Onze website is momenteel onder constructie.</h1>
+    <a class="email-link" href="mailto:info@ideation-studio.nl">
+      <span class="email-icon">&#x2709;</span> Stuur ons een e-mail
+    </a>
+  </div>
+  <footer>
+    <p>
+      <a href="#">Algemene Voorwaarden</a> | 
+      Btw-identificatienummer: NL005184506B11 | Kvk nummer: 96034513 | 
+      E-mail: <a href="mailto:info@ideation-studio.nl">info@ideation-studio.nl</a>
+    </p>
+  </footer>
+</body>
 </html>
