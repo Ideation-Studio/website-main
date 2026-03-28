@@ -100,7 +100,7 @@
         </div>
         <h3>CNC Freeswerk & Gravuren</h3>
         <p>
-          Prachtige CNC-freeswerk en gravures op maat in hout en kunststoffen, volledig afgestemd naar uw wens.
+          Prachtige CNC-freeswerk en gravures in hout en kunststoffen, volledig afgestemd naar uw wens.
         </p>
       </div>
       <!-- Service Card 3: Mallen & tooling -->
@@ -255,7 +255,7 @@
       </div>
       <div class="footer-center">
         <p><strong>E-mail:</strong> <a class="footer-email" href="mailto:info@ideation-studio.nl">info@ideation-studio.nl</a></p>
-        <p><strong>Btw-id:</strong> NL005184506B11</p>
+        <p><strong>BTW-id:</strong> NL005184506B11</p>
         <p><strong>KVK-nummer:</strong> 96034513</p>
       </div>
       <div class="footer-right">
@@ -358,8 +358,13 @@
         return;
       }
       event.preventDefault();
-      const heading = target.querySelector('h1, h2');
-      const scrollTarget = heading || target;
+      let scrollTarget = target;
+      if (href !== '#home') {
+        const heading = target.querySelector('h1, h2');
+        if (heading) {
+          scrollTarget = heading;
+        }
+      }
       const targetY = getTargetOffset(scrollTarget);
       smoothScrollTo(targetY, () => {
         history.pushState(null, '', href);
