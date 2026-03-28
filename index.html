@@ -1,98 +1,449 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ideation Studio</title>
-  <style>
-    @import url("https://fonts.googleapis.com/css2?family=Droid+Serif:wght@700&display=swap");
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Droid Serif';
-      background-color: #FFFFFF;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      color: #000000;
-    }
-
-    .container {
-      text-align: center;
-      margin-bottom: 170px;
-    }
-
-    img {
-      max-width: 100%;
-      width: 600px;
-      height: auto;
-      margin-bottom: 0px;
-    }
-
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-    }
-
-    .email-link {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-top: 20px;
-      text-decoration: none;
-      color: #2868ae;
-      font-size: 1.2rem;
-    }
-
-    .email-link:hover {
-      color: #125189;
-    }
-
-    .email-icon {
-      margin-right: 8px;
-    }
-
-    footer {
-      background-color: #f8f9fa;
-      width: 100%;
-      padding: 40px 0;
-      text-align: center;
-      position: fixed;
-      bottom: 0;
-      font-size: 0.9rem;
-    }
-
-    footer a {
-      color: #2868ae;
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ideation Studio - Home</title>
+  <!-- Inserted stylesheet reference -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="images/favicon-96x96.png" type="image/png" />
+  <!-- Optional: Google Font -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <!-- Added Inter font from Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap"
+    rel="stylesheet"
+  />
+  <!-- Preload logo images -->
+  <link rel="preload" href="images/logo_3.webp" as="image">
+  <link rel="preload" href="images/logo_2.webp" as="image">
 </head>
 <body>
-  <div class="container">
-    <img src="images/logo.png" alt="Ideation Studio Logo">
-    <h1>Onze website is momenteel onder constructie.</h1>
-    <a class="email-link" href="mailto:info@ideation-studio.nl">
-      <span class="email-icon">&#x2709;</span> Stuur ons een e-mail
-    </a>
+  <!-- NAVIGATION BAR -->
+  <nav id="mainNav">
+    <div class="nav-inner">
+      <div class="logo">
+        <img src="images/logo.webp" alt="Logo-header" class="logo-header">
+        <img src="images/logo_2.webp" alt="Logo 2" class="logo-2">
+      </div>
+      <button class="nav-toggle" type="button" aria-label="Menu openen" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Diensten</a></li>
+        <li><a href="#work">Projecten</a></li>
+        <li><a href="#about">Over</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="home">
+    <!-- New: Blue and Green circles for background aesthetics -->
+    <div class="circle blue-circle"></div>
+    <div class="circle green-circle"></div>
+    <div class="hero-container">
+      <!-- Left Column: Text & CTAs -->
+      <div class="hero-text">
+        <!-- Modified: Rounded box for technology text -->
+        <h1>
+         Van <span class="highlight">idee</span><br> tot <span class="highlight">realiteit</span>
+        </h1>
+        <p>
+            Ideation Studio ontwerpt en produceert op maat gemaakte artikelen met behulp van geavanceerde 3D- en CNC-technologie.
+        </p>
+        <div class="hero-cta">
+          <a href="#services" class="btn btn-primary">Ontdek onze diensten</a>
+          <a href="#work" class="btn btn-outline">Bekijk onze werken</a>
+        </div>
+        <a href="#about" class="discover-more">
+          Ontdek meer &rarr;
+        </a>
+      </div>
+
+      <!-- Right Column: Logo Card with Bobbing and Multi-layer Shadow -->
+      <div class="hero-image">
+        <div class="image-card">
+          <img src="images/logo_1.webp" alt="Ideation Studio Logo" />
+        </div>
+      </div>
+    </div>
+    <!-- Scroll Down Button -->
+    <a href="#services" class="scroll-down-button"></a>
+  </section>
+
+  <!-- SERVICES SECTION -->
+  <section class="services" id="services">
+    <!-- Insert new rounded box above heading -->
+    <h2><span class="highlight">Diensten</span></h2>
+    <div class="service-cards">
+      <!-- Service Card 1: 3D printen (FDM) -->
+      <div class="service-card">
+        <div class="icon-box">
+          <div class="icon icon-3d-print"></div>
+        </div>
+        <h3>3D printen (FDM)</h3>
+        <p>
+          Vervaardiging van functionele en decoratieve onderdelen van hoge kwaliteit met FDM-technologie, 
+          geschikt voor prototyping, maatwerkcomponenten en kleinschalige productie.
+        </p>
+      </div>
+      <!-- Service Card 2: CNC frezen -->
+      <div class="service-card">
+        <div class="icon-box">
+          <div class="icon icon-cnc"></div>
+        </div>
+        <h3>CNC Snijwerk & Gravuren</h3>
+        <p>
+          Prachtige CNC-freeswerk en gravures op maat in hout en kunststoffen, volledig afgestemd naar uw wens.
+        </p>
+      </div>
+      <!-- Service Card 3: Mallen & tooling -->
+      <div class="service-card">
+        <div class="icon-box">
+          <div class="icon icon-mold"></div>
+        </div>
+        <h3>Matrijzen</h3>
+        <p>
+          Ontwerp en productie van matrijzen voor stukproductie en kleinschalige series, 
+          geschikt voor het gieten van diverse materialen zoals kunstharsen (epoxy en polyurethaan), gips, beton, siliconen en meer.
+        </p>
+      </div>
+      <!-- Service Card 4: Lithofanen -->
+      <div class="service-card">
+        <div class="icon-box">
+          <div class="icon icon-lithophane"></div>
+        </div>
+        <h3>Lichtfoto's</h3>
+        <p>
+          Foto’s omgezet in verfijnde, driedimensionale reliëfpanelen die bij tegenlicht een verrassend gedetailleerd en sfeervol lichteffect onthullen.
+        </p>
+      </div>
+      <!-- Service Card 5: 3D ontwerp -->
+      <div class="service-card">
+        <div class="icon-box">
+          <div class="icon icon-design"></div>
+        </div>
+        <h3>3D ontwerp</h3>
+        <p>
+          Van eerste schets of idee tot een volledig uitgewerkt en productieklaar 3D-model.
+        </p>
+      </div>
+      <!-- Service Card 6: Persoonlijke begeleiding -->
+      <div class="service-card">
+        <div class="icon-box">
+          <div class="icon icon-wood"></div>
+        </div>
+        <h3>Van idee naar realiteit</h3>
+        <p>
+          Samen verkennen we de mogelijkheden om van uw idee een realiteit te maken, met oog voor detail.
+        </p>
+      </div>
+    </div>
+  
+  </section>
+
+  <!-- PORTFOLIO SECTION -->
+  <section class="portfolio" id="work">
+    <h2><span class="highlight">Projecten</span></h2>
+    <div class="portfolio-grid">
+      <div class="portfolio-item">
+        <div class="portfolio-image">
+          <button class="portfolio-image-button project-lithophane" type="button" data-gallery="lithophane" aria-label="Bekijk project Lichtfoto">
+            <img class="primary" src="images/projects/img_lithophane_1.png" alt="Lichtfoto project">
+            <img class="hover" src="images/projects/img_lithophane_2.png" alt="Lichtfoto project detail">
+          </button>
+        </div>
+        <div class="portfolio-info">
+          <h3>Gepersonaliseerde Lichtfoto</h3>
+          <p>Breng persoonlijke momenten tot leven met een 3D-lichtpaneel. Door de variërende materiaaldikte ontstaat een uniek lichteffect wanneer de lamp wordt aangezet.</p>
+        </div>
+      </div>
+      <div class="portfolio-item">
+        <div class="portfolio-image">
+          <img src="images/projects/image_medallion_1.png" alt="Project 2">
+        </div>
+        <div class="portfolio-info">
+          <h3>Geurmedaillons Studio C.</h3>
+          <p>Unieke geurmedaillons ontworpen en geproduceerd voor <a href="https://www.studiocinterieurs.nl/" target="_blank">Studio C. Interieurs</a>.</p>
+        </div>
+      </div>
+      <div class="portfolio-item">
+        <div class="portfolio-image">
+          <button class="portfolio-image-button project-smoker" type="button" data-gallery="smoker" aria-label="Bekijk project Smoker">
+            <img class="primary" src="images/projects/img_smoker_1.png" alt="Smoker project">
+            <img class="hover" src="images/projects/img_smoker_2.png" alt="Smoker project detail">
+          </button>
+        </div>
+        <div class="portfolio-info">
+          <h3>Essence Infuser</h3>
+          <p>Verrijk uw drank en verfijn uw smaakbeleving met de pure aroma's van natuurlijk hout.</p>
+        </div>
+      </div>
+      <!-- ...additional items as needed... -->
+    </div>
+    <div class="portfolio-cta">
+      <a href="#contact" class="btn btn-primary">Bespreek jouw project</a>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section class="about" id="about">
+    <div class="about-container">
+      <div class="about-text">
+        <h2>Over Ideation Studio</h2>
+        <p>
+          Ideation Studio is mijn eenmanszaak, ontstaan vanuit een passie voor ontwerpen en maken. 
+          Ik help particulieren en bedrijven om ideeën om te zetten in doordachte producten, van het eerste concept tot het laatste detail.
+        </p>
+        <p>
+          Met een combinatie van creativiteit en technische kennis denk ik actief mee over vorm, materiaal en maakbaarheid. 
+          Elk project krijgt mijn persoonlijke aandacht, zorg en precisie.
+        </p>
+        <p>Of het nu gaat om één uniek stuk of een kleine serie: ik luister naar uw wensen, adviseer waar nodig en werk doelgericht toe naar een resultaat waar u trots op kunt zijn. 
+          Heldere communicatie en korte lijnen staan daarbij centraal.
+        </p>
+      </div>
+      <div class="about-image">
+        <img src="images/img_headshot.png" alt="Noah Olmeijer - Ideation Studio">
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section class="contact" id="contact">
+    <div class="contact-card">
+      <div class="contact-text">
+        <h2>Neem contact op!</h2>
+        <p>
+          Heb je een idee, vraag of uitdaging? <br><br>
+          Ik denk graag met je mee over de mogelijkheden; of het nu nog een eerste schets is of al een concreet plan. <br><br> 
+          Samen bekijken we wat technisch haalbaar is en hoe we jouw idee het beste kunnen realiseren.
+        </p>
+      </div>
+      <div class="contact-actions">
+        <a class="contact-email" href="mailto:info@ideation-studio.nl">
+          info@ideation-studio.nl
+        </a>
+        <p class="contact-note"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY MODAL -->
+  <div class="modal" id="galleryModal" aria-hidden="true">
+    <div class="modal-overlay" data-modal-close></div>
+    <div class="modal-content" role="dialog" aria-modal="true" aria-label="Projectgalerij">
+      <button class="modal-close" type="button" data-modal-close aria-label="Sluiten">×</button>
+      <button class="modal-nav prev" type="button" aria-label="Vorige afbeelding">‹</button>
+      <img class="modal-image" src="" alt="">
+      <button class="modal-nav next" type="button" aria-label="Volgende afbeelding">›</button>
+    </div>
   </div>
+
+  <!-- FOOTER -->
   <footer>
-    <p>
-      <a href="documents/Algemene voorwaarden.pdf">Algemene Voorwaarden</a> | 
-      Btw-identificatienummer: NL005184506B11 | Kvk nummer: 96034513 | 
-      E-mail: <a href="mailto:info@ideation-studio.nl">info@ideation-studio.nl</a>
-    </p>
+    <div class="footer-content">
+      <div class="footer-left">
+        <img class="footer-logo" src="images/logo.webp" alt="Ideation Studio logo">
+        <p class="footer-brand"></p>
+      </div>
+      <div class="footer-center">
+        <p><strong>E-mail:</strong> <a class="footer-email" href="mailto:info@ideation-studio.nl">info@ideation-studio.nl</a></p>
+        <p><strong>BTW-id:</strong> NL005184506B11</p>
+        <p><strong>KvK-nummer:</strong> 96034513</p>
+      </div>
+      <div class="footer-right">
+        <a class="footer-link" href="documents/Algemene voorwaarden.pdf" target="_blank" rel="noopener">
+          Algemene voorwaarden (PDF)
+        </a>
+        <p class="footer-copy">&copy; <span id="year"></span> Ideation Studio</p>
+      </div>
+    </div>
   </footer>
+
+  <!-- JAVASCRIPT FOR SCROLL & FOOTER YEAR -->
+  <script>
+    // Update footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Keep nav visible and update scrolled styling
+    const nav = document.getElementById('mainNav');
+    const navToggle = document.querySelector('.nav-toggle');
+
+    let isScrolled = false;
+    let ticking = false;
+
+    const updateNavVisibility = () => {
+      const currentY = window.scrollY;
+      if (!isScrolled && currentY > 80) {
+        nav.classList.add('scrolled');
+        isScrolled = true;
+      } else if (isScrolled && currentY < 40) {
+        nav.classList.remove('scrolled');
+        isScrolled = false;
+      }
+      ticking = false;
+    };
+
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        window.requestAnimationFrame(updateNavVisibility);
+        ticking = true;
+      }
+    });
+    updateNavVisibility();
+
+    if (navToggle) {
+      navToggle.addEventListener('click', () => {
+        const isOpen = nav.classList.toggle('nav-open');
+        navToggle.setAttribute('aria-expanded', String(isOpen));
+      });
+
+      document.querySelectorAll('.nav-links a').forEach((link) => {
+        link.addEventListener('click', () => {
+          nav.classList.remove('nav-open');
+          navToggle.setAttribute('aria-expanded', 'false');
+        });
+      });
+    }
+
+    // Smooth scrolling for internal navigation links (with fixed-nav offset)
+    const getTargetOffset = (target) => {
+      const navHeight = nav ? nav.getBoundingClientRect().height : 0;
+      const offset = Math.max(navHeight + 30, 0);
+      const targetTop = target.getBoundingClientRect().top + window.pageYOffset;
+      return Math.max(targetTop - offset, 0);
+    };
+
+    const smoothScrollTo = (targetY, callback) => {
+      const startY = window.pageYOffset;
+      const distance = targetY - startY;
+      const duration = 700;
+      const startTime = performance.now();
+      const easeInOutCubic = (t) =>
+        t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+
+      const step = (now) => {
+        const elapsed = now - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const eased = easeInOutCubic(progress);
+        window.scrollTo(0, startY + distance * eased);
+        if (progress < 1) {
+          window.requestAnimationFrame(step);
+        } else if (callback) {
+          callback();
+        }
+      };
+
+      window.requestAnimationFrame(step);
+    };
+
+    document.addEventListener('click', (event) => {
+      const link = event.target.closest('a[href^="#"]');
+      if (!link) {
+        return;
+      }
+      const href = link.getAttribute('href');
+      if (!href || href === '#') {
+        return;
+      }
+      const target = document.getElementById(href.slice(1));
+      if (!target) {
+        return;
+      }
+      event.preventDefault();
+      const heading = target.querySelector('h1, h2');
+      const scrollTarget = heading || target;
+      const targetY = getTargetOffset(scrollTarget);
+      smoothScrollTo(targetY, () => {
+        history.pushState(null, '', href);
+      });
+    });
+
+    // Gallery modal for portfolio images
+    const galleries = {
+      lithophane: [
+        'images/projects/img_lithophane_1.png',
+        'images/projects/img_lithophane_2.png'
+      ],
+      smoker: [
+        'images/projects/img_smoker_1.png',
+        'images/projects/img_smoker_2.png',
+        'images/projects/img_smoker_3.png'
+      ]
+    };
+
+    const modal = document.getElementById('galleryModal');
+    const modalImage = modal?.querySelector('.modal-image');
+    const modalCloseButtons = modal?.querySelectorAll('[data-modal-close]');
+    const prevButton = modal?.querySelector('.modal-nav.prev');
+    const nextButton = modal?.querySelector('.modal-nav.next');
+    let currentGallery = [];
+    let currentIndex = 0;
+
+    const openModal = (galleryKey, startIndex = 0) => {
+      currentGallery = galleries[galleryKey] || [];
+      if (!currentGallery.length || !modal || !modalImage) {
+        return;
+      }
+      currentIndex = startIndex;
+      modalImage.src = currentGallery[currentIndex];
+      modalImage.alt = `Projectafbeelding ${currentIndex + 1}`;
+      modal.classList.add('open');
+      modal.setAttribute('aria-hidden', 'false');
+    };
+
+    const closeModal = () => {
+      if (!modal || !modalImage) {
+        return;
+      }
+      modal.classList.remove('open');
+      modal.setAttribute('aria-hidden', 'true');
+      modalImage.src = '';
+      modalImage.alt = '';
+    };
+
+    const showImage = (direction) => {
+      if (!currentGallery.length || !modalImage) {
+        return;
+      }
+      currentIndex = (currentIndex + direction + currentGallery.length) % currentGallery.length;
+      modalImage.src = currentGallery[currentIndex];
+      modalImage.alt = `Projectafbeelding ${currentIndex + 1}`;
+    };
+
+    document.querySelectorAll('.portfolio-image-button[data-gallery]').forEach((button) => {
+      button.addEventListener('click', () => {
+        openModal(button.dataset.gallery, 0);
+      });
+    });
+
+    modalCloseButtons?.forEach((button) => {
+      button.addEventListener('click', closeModal);
+    });
+
+    prevButton?.addEventListener('click', () => showImage(-1));
+    nextButton?.addEventListener('click', () => showImage(1));
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') {
+        closeModal();
+      }
+      if (modal?.classList.contains('open')) {
+        if (event.key === 'ArrowLeft') {
+          showImage(-1);
+        }
+        if (event.key === 'ArrowRight') {
+          showImage(1);
+        }
+      }
+    });
+  </script>
 </body>
 </html>
