@@ -881,12 +881,10 @@ footer {
   color: var(--text-dark);
 }
 
-/* Justified text for Portfolio added here */
 .portfolio-info p {
   font-size: 0.9rem;
   margin: 0;
   color: var(--text-dark);
-  text-align: justify;
 }
 
 .portfolio-item img {
@@ -1054,7 +1052,7 @@ footer {
     height: 70px;
   }
   .hero {
-    padding-top: 9rem;
+    padding-top: 5.5rem; /* slightly higher hero section for better mobile fit */
   }
   .hero-container {
     padding: 0 1rem;
@@ -1110,7 +1108,7 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: center; 
-    text-align: center;
+    text-align: left;
   }
 
   .portfolio-info h3 {
@@ -1122,7 +1120,6 @@ footer {
     font-size: 0.9rem;
     margin: 0;
     color: #333;
-    text-align: justify; /* Ensure justify works on mobile too */
   }
 
   .about-container {
@@ -1139,5 +1136,15 @@ footer {
     margin: 0 auto 0.75rem;
     font-size: 2.4rem;
     white-space: normal;
+  }
+
+  /* Hide hero side image on phone view to keep focus on text, reduce pressure on vertical space */
+  .hero-image {
+    display: none;
+  }
+
+  /* Place scroll-down button comfortably above bottom edge on phone */
+  .scroll-down-button {
+    bottom: 110px;
   }
 }
